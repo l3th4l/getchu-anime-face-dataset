@@ -1,5 +1,8 @@
 # Getchu Anime Face Dataset
 
+
+![Screenshot](examples.png)
+
 ## Requirements:
 
     # Tools: curl, parallel, python 3, wget, awk
