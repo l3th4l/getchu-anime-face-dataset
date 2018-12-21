@@ -13,7 +13,6 @@ files = glob.glob('imgs/*.jpg', recursive=True)
 def crop_face(filename):
     im = PIL.Image.open(filename)
 
-
     faces = animeface.detect(im)
 
     if len(faces) != 1:
@@ -35,9 +34,6 @@ def crop_face(filename):
         x1 += np.abs(np.minimum(0, x1))
         x2 += np.abs(np.minimum(0, x1))
         return img, x1, x2, y1, y2
-
-
-
 
     for face in faces:
         L_x = face.left_eye.pos.x + face.left_eye.pos.height//2

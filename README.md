@@ -1,5 +1,21 @@
 # Getchu Anime Face Dataset
 
+## Requirements:
+
+    # Tools: curl, parallel, python 3, wget, awk
+    sudo apt install parallel
+
+    # macOS
+    brew install parallel
+
+    # python library: animeface, cv2
+    pip install animeface opencv-python
+
+
+## Link to online images
+
+`./img_link_.txt`
+
 ## Download Getchu dataset
 
 ### Query SQL 
@@ -58,6 +74,7 @@ awk '{print "www.getchu.com/"substr($0,3)}' img_links.txt > img_links_.txt
 ```
 mkdir imgs
 cd imgs && cat ../img_links_.txt | parallel -j 32 wget -q -O {#}.jpg {}
+cd ..
 ```
 
 
